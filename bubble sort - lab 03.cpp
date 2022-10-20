@@ -38,7 +38,7 @@ int main()
 	int array[10];
 	int size= sizeof(array) / sizeof(array[0]);
 	cout<<"\tMUHAMMAD NOMAN \tID: 35152-BSCS"<<endl;
-	cout<<"\tBubble Sort Algorithm...";
+	cout<<"\tBubble Sort Algorithm...\n";
 	cout<<"\nEnter elements to the Array "<<endl;
 	for(int i=0; i<size;i++)
 	{
@@ -46,8 +46,8 @@ int main()
 		cin>>array[i];
 	}
 	bubble_sort(array,size);
-	cout<<" Sorted Array in Ascending order:\n";
-	bubble_sort(array,size);
+	cout<<"\n Sorted Array in Ascending order : \n\n";
+	printarr(array,size);
 	
 	return 0;
 	
