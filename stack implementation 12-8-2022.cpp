@@ -11,7 +11,7 @@ Node *top = NULL;
 
 // function to chec if stack is empty
 
-void isempty()
+bool isempty()
 {
 	if(top == NULL)
 	{
@@ -42,7 +42,7 @@ void pop()
 	{
 		cout<<"Stack is empty\n";
 	}
-	esle{
+	else{
 	Node *ptr = top;
 	top = top->link;
 	delete(ptr);
@@ -59,7 +59,7 @@ void showTop()
 	}
 	else
 	{
-		cout<<"Element at the top : "<<top->data;
+		cout<<"Element at the top : "<<top->data<<"\n";
 	}
 	
 }
@@ -73,12 +73,14 @@ void displayStack()
 	}
 	else
 	{
+	    cout<<"\nElements in the stack: ";
 		Node *temp = top;
 		while(temp!= NULL)
 		{
-			cout<<temp->data<<" ";
+			cout<<temp->data<<"->";
+			temp = temp->link;
 		}
-		cout<<"\n";
+		cout<<"NULL\n";
 	}
 	
 }
@@ -90,7 +92,7 @@ int main()
 	int choice , flage=1, value;
 	
 	// main drivemn program using switch
-	while( flag == 1)
+	while( flage == 1)
 	{
 		cout<<"[1]. Push\n";
 		cout<<"[2]. Pop\n";
@@ -126,7 +128,8 @@ int main()
 				}
 			case 5:
 				{
-					flag = 0;
+					flage = 0;
+					cout<<"\n\tGood Bye!...";
 					break;
 				}
 		}
